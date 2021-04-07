@@ -3,7 +3,7 @@ package vista;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Pantalla {
+public abstract class Pantalla {
 	protected PApplet app;
 	private int posX;
 	private int posY;
