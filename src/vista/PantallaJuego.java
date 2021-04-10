@@ -2,6 +2,7 @@ package vista;
 
 import java.util.ArrayList;
 
+import controlador.Control;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -11,6 +12,8 @@ public class PantallaJuego extends Pantalla {
 	private int index;
 	private ArrayList<Elemento> elmentsList;
 	private boolean passNext;
+	private Control control;
+	
 
 	PantallaJuego(PApplet app, int posX, int posY, PImage bgImg, int numberList, int index) {
 		super(app, posX, posY, bgImg);
@@ -26,6 +29,7 @@ public class PantallaJuego extends Pantalla {
 					getApp().loadImage("./../Recursos/Forma "+(i+1)+".png"),50,(200*i)+100,200,150));
 		}
 		
+		control = new Control(getApp());
 	}
 	
 	
@@ -37,6 +41,9 @@ public class PantallaJuego extends Pantalla {
 		if(passNext) {
 			pintarBtn();
 		}
+		getApp().fill(0);
+		getApp().textSize(17);
+		getApp().text(control.getLogic().getText()[index], 300,50,500,200);
 	}
 	
 	public void clickLista() {
@@ -59,12 +66,16 @@ public class PantallaJuego extends Pantalla {
 	
 	public void aceptarFigura(int posX,int posY, int tamX, int tamY) {
 		
+
 		for(int i=0; i<numberList; i++) {
 			if(elmentsList.get(i).getImgSrc().contains(Integer.toString(index))) {
+				System.out.println(index);
+
+				System.out.println(elmentsList.get(i).getImgSrc());
 				if(elmentsList.get(i).getPosX()>posX && elmentsList.get(i).getPosX()<posX+tamX && 
 						elmentsList.get(i).getPosY()>posY && elmentsList.get(i).getPosY()<posY+tamY	) {
 					pintarBtn();
-					System.out.println("esta fucnionando");
+					
 					elmentsList.get(i).setPosX(posX);
 					elmentsList.get(i).setPosX(posY);
 					elmentsList.get(i).setTamX(tamX);
@@ -84,7 +95,7 @@ public class PantallaJuego extends Pantalla {
 	
 	
 	public int nextScreen(int pantalla) {
-		if(pintarBtn() && getApp().mouseX>258 && getApp().mouseX<258+200 && 
+		if(passNext && getApp().mouseX>258 && getApp().mouseX<258+200 && 
 				getApp().mouseY>657 && getApp().mouseY<657+100) {
 			return pantalla+1;
 		} else {

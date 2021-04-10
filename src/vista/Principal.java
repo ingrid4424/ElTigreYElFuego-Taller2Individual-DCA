@@ -23,7 +23,7 @@ public class Principal extends PApplet {
 	PantallaFinal pantallaFinal;
 
 	public void setup() {
-		seleccionarPantalla = 1;
+		seleccionarPantalla = 4;
 		pantallaInicial = new PantallaInicial(this, 0, 0, loadImage("./../Recursos/Portada .jpg"));
 		pantallaJuego1 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P1.jpg"),3,1);
 		pantallaJuego2 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P2.jpg"),3,2);
