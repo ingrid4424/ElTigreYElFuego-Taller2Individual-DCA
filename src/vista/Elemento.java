@@ -13,10 +13,12 @@ public  class Elemento {
 	private boolean isArrastrable;
 	private int basePositionY;
 	private int basePositionX;
+	private String imgSrc;
 	
-	Elemento(PApplet app,PImage img, PImage imgreemplazar,int posX,int posY,int tamX,int tamY){
+	Elemento(PApplet app,PImage img, String imgSrc, PImage imgreemplazar,int posX,int posY,int tamX,int tamY){
 		this.app = app;
 		this.img = img;
+		this.imgSrc = imgSrc;
 		this.posX = posX;
 		this.posY = posY;
 		this.tamX = tamX;
@@ -26,6 +28,14 @@ public  class Elemento {
 		this.isArrastrable = false;
 	}
 	
+	public String getImgSrc() {
+		return imgSrc;
+	}
+
+	public void setImgSrc(String imgSrc) {
+		this.imgSrc = imgSrc;
+	}
+
 	public void pintar() {
 		this.app.image(img, posX, posY, tamX, tamY);
 	}

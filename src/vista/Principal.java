@@ -43,18 +43,28 @@ public class Principal extends PApplet {
 		case 1:
 			pantallaJuego1.pintarBg();
 			pantallaJuego1.pintarLista();
+			pantallaJuego1.aceptarFigura(395,315,200,300);
 			break;
 		case 2:
 			pantallaJuego2.pintarBg();
+			pantallaJuego2.pintarLista();
+			pantallaJuego2.aceptarFigura(395,315,200,300);
 			break;
 		case 3:
 			pantallaJuego3.pintarBg();
+			pantallaJuego3.pintarLista();
+			pantallaJuego3.aceptarFigura(395,315,200,300);
+			
 			break;
 		case 4:
 			pantallaJuego4.pintarBg();
+			pantallaJuego4.pintarLista();
+			pantallaJuego4.aceptarFigura(395,315,200,300);
 			break;
 		case 5:
 			pantallaJuego5.pintarBg();
+			pantallaJuego5.pintarLista();
+			pantallaJuego5.aceptarFigura(395,315,200,300);
 			break;
 		case 6:
 			pantallaFinal.pintarBg();
@@ -76,17 +86,28 @@ public class Principal extends PApplet {
 			break;
 		case 1:
 			pantallaJuego1.clickLista();
+			seleccionarPantalla = pantallaJuego1.nextScreen(seleccionarPantalla);
 			break;
 		case 2:
+			pantallaJuego2.clickLista();
+			seleccionarPantalla = pantallaJuego2.nextScreen(seleccionarPantalla);
 
 			break;
 		case 3:
+			pantallaJuego3.clickLista();
+			seleccionarPantalla = pantallaJuego3.nextScreen(seleccionarPantalla);
 
 			break;
 		case 4:
+			pantallaJuego4.clickLista();
+			seleccionarPantalla = pantallaJuego4.nextScreen(seleccionarPantalla);
 
 			break;
+		case 5:
+			pantallaJuego5.clickLista();
+			seleccionarPantalla = pantallaJuego5.nextScreen(seleccionarPantalla);
 
+			break;
 		default:
 			break;
 		}
@@ -101,16 +122,16 @@ public class Principal extends PApplet {
 			pantallaJuego1.draggedLista();
 			break;
 		case 2:
-			
+			pantallaJuego2.draggedLista();
 			break;
 		case 3:
-		
+			pantallaJuego3.draggedLista();
 			break;
 		case 4:
-		
+			pantallaJuego4.draggedLista();
 			break;
 		case 5:
-			
+			pantallaJuego5.draggedLista();
 			break;
 		case 6:
 	
@@ -130,12 +151,16 @@ public class Principal extends PApplet {
 			pantallaJuego1.soltarLista();
 			break;
 		case 2:
+			pantallaJuego2.soltarLista();
 			break;
 		case 3:
+			pantallaJuego3.soltarLista();
 			break;
 		case 4:
+			pantallaJuego4.soltarLista();
 			break;
 		case 5:
+			pantallaJuego5.soltarLista();
 			break;
 		case 6:
 			break;
