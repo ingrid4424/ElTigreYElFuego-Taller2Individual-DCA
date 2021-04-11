@@ -23,7 +23,7 @@ public class Principal extends PApplet {
 	PantallaFinal pantallaFinal;
 
 	public void setup() {
-		seleccionarPantalla = 4;
+		seleccionarPantalla = 6;
 		pantallaInicial = new PantallaInicial(this, 0, 0, loadImage("./../Recursos/Portada .jpg"));
 		pantallaJuego1 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P1.jpg"),3,1);
 		pantallaJuego2 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P2.jpg"),3,2);
@@ -68,13 +68,13 @@ public class Principal extends PApplet {
 			break;
 		case 6:
 			pantallaFinal.pintarBg();
+			pantallaFinal.pintarBtn();
 			break;
 
 		default:
 			break;
 		}
 		
-		text(mouseX + "&" + mouseY,mouseX,mouseY);
 
 		
 	}
@@ -107,6 +107,9 @@ public class Principal extends PApplet {
 			pantallaJuego5.clickLista();
 			seleccionarPantalla = pantallaJuego5.nextScreen(seleccionarPantalla);
 
+			break;
+		case 6:
+			pantallaFinal.createTXT();
 			break;
 		default:
 			break;

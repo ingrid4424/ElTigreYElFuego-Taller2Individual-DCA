@@ -25,7 +25,7 @@ public class PantallaJuego extends Pantalla {
 		for(int i=0; i<numberList; i++) {
 			elmentsList.add(new Elemento(getApp(),
 					index<4? getApp().loadImage("./../Recursos/FormaNormal"+(i+1)+".png") : getApp().loadImage("./../Recursos/FormaNormal"+(i+4)+".png") ,
-							"./../Recursos/FormaNormal"+(i+1)+".png",
+							index<4? "./../Recursos/FormaNormal"+(i+1)+".png" : "./../Recursos/FormaNormal"+(i+4)+".png",
 					getApp().loadImage("./../Recursos/Forma "+(i+1)+".png"),50,(200*i)+100,200,150));
 		}
 		
@@ -68,10 +68,13 @@ public class PantallaJuego extends Pantalla {
 		
 
 		for(int i=0; i<numberList; i++) {
+			
+			System.out.println(index);
+			System.out.println(elmentsList.get(i).getImgSrc());
 			if(elmentsList.get(i).getImgSrc().contains(Integer.toString(index))) {
-				System.out.println(index);
+				
 
-				System.out.println(elmentsList.get(i).getImgSrc());
+				
 				if(elmentsList.get(i).getPosX()>posX && elmentsList.get(i).getPosX()<posX+tamX && 
 						elmentsList.get(i).getPosY()>posY && elmentsList.get(i).getPosY()<posY+tamY	) {
 					pintarBtn();
