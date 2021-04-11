@@ -13,7 +13,7 @@ public class Logica {
 	}
 	
 	public void saveTXT() {
-		//tigre,camaelon, fueg, hamaca y animales
+		//tigre,camaelon, fuego, hamaca y animales
 		String[] svtxt = text.clone();
 		
 		svtxt[1] = svtxt[1].replace("tigre", "TIGRE");

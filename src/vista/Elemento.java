@@ -45,16 +45,16 @@ public  class Elemento {
 				&& this.app.mouseY>this.posY && this.app.mouseY < (this.posY+this.tamY)) {
 			this.isArrastrable = true;
 		}
-	}
+	} 
 	
 	public void arrastrar() {
 		if(isArrastrable == true) {
 			posX = app.mouseX;
 			posY = app.mouseY;
 		}
-	}
+	} 
 	
-	public void soltarArrastrar() {
+	public void soltarArrastrar() { 
 		isArrastrable = false;
 	}
 
