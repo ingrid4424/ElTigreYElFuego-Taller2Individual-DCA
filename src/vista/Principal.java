@@ -23,7 +23,7 @@ public class Principal extends PApplet {
 	PantallaFinal pantallaFinal;
 
 	public void setup() {
-		seleccionarPantalla = 6;
+		seleccionarPantalla = 0;
 		pantallaInicial = new PantallaInicial(this, 0, 0, loadImage("./../Recursos/Portada .jpg"));
 		pantallaJuego1 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P1.jpg"),3,1);
 		pantallaJuego2 = new PantallaJuego(this, 0, 0, loadImage("./../Recursos/P2.jpg"),3,2);
@@ -36,6 +36,8 @@ public class Principal extends PApplet {
 	public void draw() {
 		
 		background(255);
+		fill(255);
+		
 		switch (seleccionarPantalla) {
 		case 0:
 			pantallaInicial.pintarBg();
@@ -43,23 +45,23 @@ public class Principal extends PApplet {
 		case 1:
 			pantallaJuego1.pintarBg();
 			pantallaJuego1.pintarLista();
-			pantallaJuego1.aceptarFigura(395,315,200,300);
+			pantallaJuego1.aceptarFigura(380,418,258,355);
 			break;
 		case 2:
 			pantallaJuego2.pintarBg();
 			pantallaJuego2.pintarLista();
-			pantallaJuego2.aceptarFigura(395,315,200,300);
+			pantallaJuego2.aceptarFigura(401,317,267,180);
 			break;
 		case 3:
 			pantallaJuego3.pintarBg();
 			pantallaJuego3.pintarLista();
-			pantallaJuego3.aceptarFigura(395,315,200,300);
+			pantallaJuego3.aceptarFigura(357,372,667,291);
 			
 			break;
 		case 4:
 			pantallaJuego4.pintarBg();
 			pantallaJuego4.pintarLista();
-			pantallaJuego4.aceptarFigura(395,315,200,300);
+			pantallaJuego4.aceptarFigura(359,366,180,97);
 			break;
 		case 5:
 			pantallaJuego5.pintarBg();
@@ -75,7 +77,7 @@ public class Principal extends PApplet {
 			break;
 		}
 		
-
+		text(mouseX +" "+mouseY, mouseX, mouseY);
 		
 	}
 

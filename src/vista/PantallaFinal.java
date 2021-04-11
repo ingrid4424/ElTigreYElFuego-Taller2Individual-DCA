@@ -18,7 +18,7 @@ public class PantallaFinal extends Pantalla{
 	}
 	
 	public void pintarBtn() {
-		this.app.image(this.app.loadImage("./../Recursos/botonsgt.png"), this.app.width/2, 600);
+		this.app.image(this.app.loadImage("./../Recursos/botonGuardartxt.png"), this.app.width/2, 600);
 	}
 	
 	public void createTXT() {

@@ -14,13 +14,16 @@ public class Logica {
 	
 	public void saveTXT() {
 		//tigre,camaelon, fueg, hamaca y animales
-		text[1].replace("tigre", "TIGRE");
-		text[2].replace("animales", "ANIMALES");
-		text[3].replace("hamaca", "HAMACA");
-		text[4].replace("fuego", "FUEGO");
-		text[5].replace("camaleÃ³n", "CAMALEON");
-		
 		String[] svtxt = text.clone();
+		
+		svtxt[1] = svtxt[1].replace("tigre", "TIGRE");
+		svtxt[2] = svtxt[2].replace("animales", "ANIMALES");
+		svtxt[3] = svtxt[3].replace("hamaca", "HAMACA");
+		svtxt[4] = svtxt[4].replace("fuego", "FUEGO");
+		svtxt[5] = svtxt[5].replace("camaleón", "CAMALEON");
+		
+		
+		System.out.println(svtxt[1]);
 		this.app.saveStrings("./newTXT.txt", svtxt);
 	}
 

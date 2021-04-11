@@ -92,13 +92,13 @@ public class PantallaJuego extends Pantalla {
 	}
 	
 	public boolean pintarBtn() {
-		getApp().image(getApp().loadImage("./../Recursos/botonsgt.png"), 258, 657);
+		getApp().image(getApp().loadImage("./../Recursos/botonsgt.png"), 158, 657);
 		return true;
 	}
 	
 	
 	public int nextScreen(int pantalla) {
-		if(passNext && getApp().mouseX>258 && getApp().mouseX<258+200 && 
+		if(passNext && getApp().mouseX>158 && getApp().mouseX<158+200 && 
 				getApp().mouseY>657 && getApp().mouseY<657+100) {
 			return pantalla+1;
 		} else {
